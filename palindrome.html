@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        text-align: center;
+        background-color: #b2babb;
+      }
+      h1 {
+        color: #d68910;
+      }
+      h3 {
+        color: #2980b9;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>31.Program to find palindrome of a number?</h1>
+    <center>
+      <table>
+        <tr>
+          <td><h3>Enter the number</h3></td>
+          <td>:</td>
+          <td><input type="textbox" id="num1" /></td>
+        </tr>
+        <tr>
+          <th style="text-align: center">
+            <button type="button" onClick="palin()">Check</button>
+          </th>
+        </tr>
+        
+      </table>
+    </center>
+	<p id="rev1"></p>
+    <script>
+      function palin() {
+        var num1,rem,rev=0,temp;
+        num1= parseInt(document.getElementById("num1").value);
+	temp=num1;
+	while (num1>0) {
+	rem= num1 % 10;
+	rev = rev*10 + rem;
+	num1=parseInt(num1/10);
+	rev = Math.floor(rev);
+	}
+	if(temp==rev) {
+	document.getElementById("rev1").innerHTML="palindrome";
+	}
+	else {
+	document.getElementById("rev1").innerHTML=" Not a palindrome";
+	}
+	}
+    </script>
+  </body>
+</html>

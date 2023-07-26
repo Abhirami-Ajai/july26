@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        text-align: center;
+        background-color: #b2babb;
+      }
+      h1 {
+        color: #d68910;
+      }
+      h3 {
+        color: #2980b9;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>39.Program to find sum of even and numbers?</h1>
+    <center>
+      <table>
+	<tr>
+          <td><h3>Enter the Limit</h3></td>
+          <td>:</td>
+          <td><input type="textbox" id="num1" /></td>
+        </tr>
+	<tr>
+          <th style="text-align: center">
+            <button type="button" onClick="even()">Even</button>
+          </th>
+	  <th style="text-align: center">
+            <button type="button" onClick="odd()">Odd</button>
+          </th>
+        </tr>
+	
+      </table>
+    </center>
+    <p id="demo"></p>
+    <script>
+     function even() {
+	var sum=0;
+        var n = parseInt(document.getElementById("num1").value);
+        var resultHTML = "";
+	 for (var i = 1; i <= n; i++) {
+	  if(i%2==0) {
+	  sum=sum+i;
+          resultHTML += i +"<br>";
+	  }
+		
+        }
+	resultHTML += "<br>Sum of Even numbers: " + sum + "<br>";
+	document.getElementById("demo").innerHTML = resultHTML;
+        
+      }
+      function odd() {
+	var sum=0;
+        var n = parseInt(document.getElementById("num1").value);
+        var resultHTML = "";
+	 for (var i = 1; i <= n; i++) {
+	  if(i%2!=0) {
+	  sum=sum+i;
+          resultHTML += i +"<br>";
+	  }
+		
+        }
+	resultHTML += "<br>Sum  of Odd numbers: " + sum + "<br>";
+	document.getElementById("demo").innerHTML = resultHTML;
+        
+      }
+ 
+    </script>
+  </body>
+</html>

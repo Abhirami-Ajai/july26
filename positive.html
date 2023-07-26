@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        text-align: center;
+        background-color: #b2babb;
+      }
+      h1 {
+        color: #d68910;
+      }
+      h3 {
+        color: #2980b9;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>34.Program to check a number is positive or negative?</h1>
+    <center>
+      <table>
+        <tr>
+          <td><h3>Enter the number</h3></td>
+          <td>:</td>
+          <td><input type="textbox" id="num1" /></td>
+        </tr>
+        <tr>
+          <th style="text-align: center">
+            <button type="button" onClick="pos()">Check</button>
+          </th>
+        </tr>
+        <tr>
+          <td><h3>The number is</h3></td>
+          <td>:</td>
+          <td><input type="textbox" id="positive" /></td>
+        </tr>
+      </table>
+    </center>
+
+    <script>
+      function pos() {
+        var n;
+        n= parseInt(document.getElementById("num1").value);
+	if(n>0) {
+	document.getElementById("positive").value="Positive";
+	}
+	else if(n<0) {
+	document.getElementById("positive").value="Negative";
+	}
+	else {
+	document.getElementById("positive").value="Zero";
+	}
+     }
+    </script>
+  </body>
+</html>

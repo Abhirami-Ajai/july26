@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        text-align: center;
+        background-color: #b2babb;
+      }
+      h1 {
+        color: #d68910;
+      }
+      h3 {
+        color: #2980b9;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>33.Program to check a number is prime or not?</h1>
+    <center>
+      <table>
+        <tr>
+          <td><h3>Enter the first number</h3></td>
+          <td>:</td>
+          <td><input type="textbox" id="num1" /></td>
+        </tr>
+        <tr>
+          <th style="text-align: center">
+            <button type="button" onClick="prime()">Check</button>
+          </th>
+        </tr>
+        <tr>
+          <td><h3>The number is</h3></td>
+          <td>:</td>
+          <td><input type="textbox" id="prime_num" /></td>
+        </tr>
+      </table>
+    </center>
+
+    <script>
+      function prime() {
+        var i,n,flag=0;
+        n= parseInt(document.getElementById("num1").value);
+	for(i=1;i<=n;i++) {
+	  if(n%i==0){
+	    flag++;
+	  }
+	}
+	if(flag==2) {
+	document.getElementById("prime_num").value="Prime";
+	}
+	else {
+	document.getElementById("prime_num").value="not a Prime";
+	}
+     }
+    </script>
+  </body>
+</html>

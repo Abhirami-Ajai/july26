@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        text-align: center;
+        background-color: #b2babb;
+      }
+      h1 {
+        color: #d68910;
+      }
+      h3 {
+        color: #2980b9;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>44.Program to find volume and surface Area of a Cube?</h1>
+    <center>
+      <table>
+	<tr>
+          <td><h3>Enter the Length</h3></td>
+          <td>:</td>
+          <td><input type="textbox" id="num1" /></td>
+        </tr>
+	<tr>
+          <th style="text-align: center">
+            <button type="button" onClick="Volume()">Calculate</button>
+          </th>
+        </tr>
+	<tr>
+          <td><h3>Volume</h3></td>
+          <td>:</td>
+          <td><input type="textbox" id="c1" /></td>
+        </tr>
+	<tr>
+          <td><h3>Surface Area</h3></td>
+          <td>:</td>
+          <td><input type="textbox" id="c2" /></td>
+        </tr>
+	<tr>
+          <td><h3> Lateral Surface Area</h3></td>
+          <td>:</td>
+          <td><input type="textbox" id="c3" /></td>
+        </tr>
+      </table>
+    </center>
+ 
+    <script>
+     function Volume() {
+	var l;
+        l = parseInt(document.getElementById("num1").value);
+        vol=l*l*l;
+	sa=6*l*l;
+	lsa=4*l*l;
+	document.getElementById("c1").value =vol;
+	document.getElementById("c2").value =sa;
+	document.getElementById("c3").value =lsa;
+       
+      }
+ 
+    </script>
+  </body>
+</html>

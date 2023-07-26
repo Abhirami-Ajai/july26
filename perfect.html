@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        text-align: center;
+        background-color: #b2babb;
+      }
+      h1 {
+        color: #d68910;
+      }
+      h3 {
+        color: #2980b9;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>32.Program to perfect number?</h1>
+    <center>
+      <table>
+        <tr>
+          <td><h3>Enter the number</h3></td>
+          <td>:</td>
+          <td><input type="textbox" id="num1" /></td>
+        </tr>
+        <tr>
+          <th style="text-align: center">
+            <button type="button" onClick="perfect()">Check</button>
+          </th>
+        </tr>
+        
+      </table>
+    </center>
+	<p id="rev1"></p>
+    <script>
+      function perfect() {
+        var num1,sum=0;
+        num1= parseInt(document.getElementById("num1").value);
+	for(var i=0;i<num1;i++) {
+	  if(num1%i==0) {
+	 	sum=sum+i;
+	   }
+	}
+	if(sum==num1) {
+	document.getElementById("rev1").innerHTML="Perfect Number";
+	}
+	else {
+	document.getElementById("rev1").innerHTML=" Not a Perfect Number";
+	}
+	}
+    </script>
+  </body>
+</html>

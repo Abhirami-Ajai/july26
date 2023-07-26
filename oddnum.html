@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        text-align: center;
+        background-color: #b2babb;
+      }
+      h1 {
+        color: #d68910;
+      }
+      h3 {
+        color: #2980b9;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>29.Program to find odd numbers from 1 to N?</h1>
+    <center>
+      <table>
+	<tr>
+          <td><h3>Enter the Limit</h3></td>
+          <td>:</td>
+          <td><input type="textbox" id="num1" /></td>
+        </tr>
+	<tr>
+          <th style="text-align: center">
+            <button type="button" onClick="divisible()">Print</button>
+          </th>
+        </tr>
+	
+      </table>
+    </center>
+    <p id="demo"></p>
+    <script>
+     function divisible() {
+        var n = parseInt(document.getElementById("num1").value);
+        var resultHTML = "";
+	 for (var i = 1; i <= n; i++) {
+	  if(i%2!=0) {
+          resultHTML += i +"<br>";
+	  }
+		
+        }
+	document.getElementById("demo").innerHTML = resultHTML;
+        
+      }
+ 
+    </script>
+  </body>
+</html>

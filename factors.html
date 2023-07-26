@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        text-align: center;
+        background-color: #b2babb;
+      }
+      h1 {
+        color: #d68910;
+      }
+      h3 {
+        color: #2980b9;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>22.Program to find Factors of a number?</h1>
+    <center>
+      <table>
+	<tr>
+          <td><h3>Enter the number</h3></td>
+          <td>:</td>
+          <td><input type="textbox" id="num1" /></td>
+        </tr>
+        <tr>
+	<tr>
+          <th style="text-align: center">
+            <button type="button" onClick="fact()">Print</button>
+          </th>
+        </tr>
+	<tr>
+          <td><h3>Factors are</h3></td>
+          <td>:</td>
+          <td><input type="textbox" id="factors" /></td>
+        </tr>
+      </table>
+    </center>
+    <p id="demo"></p>
+    <script>
+     function fact()
+    {
+        var n,factor=[];
+	n= parseInt(document.getElementById("num1").value);
+	for(i=1;i<=n;i++) {
+	  if(n%i==0) {
+	    factor.push(i);
+          }
+	}
+	document.getElementById("factors").value=factor;
+    }
+ 
+    </script>
+  </body>
+</html>

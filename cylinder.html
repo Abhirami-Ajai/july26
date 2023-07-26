@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        text-align: center;
+        background-color: #b2babb;
+      }
+      h1 {
+        color: #d68910;
+      }
+      h3 {
+        color: #2980b9;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>45.Program to find volume and surface Area of a Cylinder?</h1>
+    <center>
+      <table>
+	<tr>
+          <td><h3>Enter the Length</h3></td>
+          <td>:</td>
+          <td><input type="textbox" id="num1" /></td>
+        </tr>
+	<tr>
+          <td><h3>Enter the Width</h3></td>
+          <td>:</td>
+          <td><input type="textbox" id="num2" /></td>
+        </tr>
+	<tr>
+          <th style="text-align: center">
+            <button type="button" onClick="Volume()">Calculate</button>
+          </th>
+        </tr>
+	<tr>
+          <td><h3>Volume</h3></td>
+          <td>:</td>
+          <td><input type="textbox" id="c1" /></td>
+        </tr>
+	<tr>
+          <td><h3>Surface Area</h3></td>
+          <td>:</td>
+          <td><input type="textbox" id="c2" /></td>
+        </tr>
+	<tr>
+          <td><h3> Lateral Surface Area</h3></td>
+          <td>:</td>
+          <td><input type="textbox" id="c3" /></td>
+        </tr>
+	<tr>
+          <td><h3>Bottom Surface Area</h3></td>
+          <td>:</td>
+          <td><input type="textbox" id="c4" /></td>
+        </tr>
+      </table>
+    </center>
+ 
+    <script>
+     function Volume() {
+	var r,h,sa,lsa,bsa,pi=3.14;
+        r = parseInt(document.getElementById("num1").value);
+	h = parseInt(document.getElementById("num2").value);
+        vol=pi*r*r*h;
+	sa=(2*pi*r*r)+(2*pi*r*h);
+	lsa=2*pi*r*h;
+	bsa=pi*r*r;
+	document.getElementById("c1").value =vol;
+	document.getElementById("c2").value =sa;
+	document.getElementById("c3").value =lsa;
+	document.getElementById("c4").value =bsa;
+       
+      }
+ 
+    </script>
+  </body>
+</html>

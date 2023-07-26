@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        text-align: center;
+        background-color: #b2babb;
+      }
+      h1 {
+        color: #d68910;
+      }
+      h3 {
+        color: #2980b9;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>41.Program to find Employee Salary?</h1>
+    <center>
+      <table>
+	<tr>
+          <td><h3>Enter the Basic Salary</h3></td>
+          <td>:</td>
+          <td><input type="textbox" id="num1" /></td>
+        </tr>
+	<tr>
+          <th style="text-align: center">
+            <button type="button" onClick="salary()">Calculate</button>
+          </th>
+        </tr>
+	
+      </table>
+    </center>
+    <p id="demo"></p>
+    <script>
+     function salary() {
+	var bp,hra,gs,da;
+        bp = parseInt(document.getElementById("num1").value);
+        if(bp<=10000) {
+	 hra= (8/100)*bp;
+	 da= (10/100)*bp;
+	}
+	else if(bp<=20000) {
+	 hra= (16/100)*bp;
+	 da= (20/100)*bp;
+	}
+	else {
+	 hra= (24/100)*bp;
+	 da= (30 /100)*bp;
+	}
+	gs=bp+hra+da;
+	document.getElementById("demo").innerText = gs;
+        
+      }
+ 
+    </script>
+  </body>
+</html>

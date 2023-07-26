@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        text-align: center;
+        background-color: #b2babb;
+      }
+      h1 {
+        color: #d68910;
+      }
+      h3 {
+        color: #2980b9;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>30.Program to find products of digit in a number?</h1>
+    <center>
+      <table>
+	<tr>
+          <td><h3>Enter the Limit</h3></td>
+          <td>:</td>
+          <td><input type="textbox" id="num1" /></td>
+        </tr>
+	<tr>
+          <th style="text-align: center">
+            <button type="button" onClick="products()">Check</button>
+          </th>
+        </tr>
+	
+      </table>
+    </center>
+    <p id="demo"></p>
+    <script>
+     function products() {
+	var rem, product=1;
+        var n = parseInt(document.getElementById("num1").value);
+	 while(n!=0) {
+          rem= n % 10;
+	  product=product* rem;
+	  n=Math.floor(n/10);
+	}
+	document.getElementById("demo").innerHTML= product;
+        
+      }
+ 
+    </script>
+  </body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        text-align: center;
+        background-color: #b2babb;
+      }
+      h1 {
+        color: #d68910;
+      }
+      h3 {
+        color: #2980b9;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>23.Program to find Factorial of a number?</h1>
+    <center>
+      <table>
+	<tr>
+          <td><h3>Enter the number</h3></td>
+          <td>:</td>
+          <td><input type="textbox" id="num1" /></td>
+        </tr>
+        <tr>
+	<tr>
+          <th style="text-align: center">
+            <button type="button" onClick="factorial()">Print</button>
+          </th>
+        </tr>
+	<tr>
+          <td><h3>Factorial </h3></td>
+          <td>:</td>
+          <td><input type="textbox" id="factor" /></td>
+        </tr>
+      </table>
+    </center>
+    
+    <script>
+     function factorial()
+    {
+        var n,i;
+	n= parseInt(document.getElementById("num1").value);
+	if(n<0) {
+	   document.getElementById("factor").value="invalid";
+	}
+	else if(n==0) {
+	   document.getElementById("factor").value=1;
+	}
+	else {
+	  let fact=1;
+	  for(i=1;i<=n;i++) {
+	    fact=fact*i;
+	  }
+	  document.getElementById("factor").value=fact;
+	}
+    }
+ 
+    </script>
+  </body>
+</html>

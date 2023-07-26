@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        text-align: center;
+        background-color: #b2babb;
+      }
+      h1 {
+        color: #d68910;
+      }
+      h3 {
+        color: #2980b9;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>25.Program to find Multiplication of a number?</h1>
+    <center>
+      <table>
+	<tr>
+          <td><h3>Enter the number</h3></td>
+          <td>:</td>
+          <td><input type="textbox" id="num1" /></td>
+        </tr>
+	<tr>
+          <td><h3>Enter the Range</h3></td>
+          <td>:</td>
+          <td><input type="textbox" id="range" /></td>
+        </tr>
+        <tr>
+	<tr>
+          <th style="text-align: center">
+            <button type="button" onClick="multiply()">Print</button>
+          </th>
+        </tr>
+	
+      </table>
+    </center>
+    <p id="demo"></p>
+    <script>
+     function multiply() {
+        var n = parseInt(document.getElementById("num1").value);
+        var r = parseInt(document.getElementById("range").value);
+        var resultHTML = "";
+	 for (var i = 1; i <= r; i++) {
+          var result = n * i;
+          resultHTML += `${n} * ${i} = ${result}<br>`;
+        }
+
+        document.getElementById("demo").innerHTML = resultHTML;
+      }
+ 
+    </script>
+  </body>
+</html>

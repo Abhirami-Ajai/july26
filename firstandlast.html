@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        text-align: center;
+        background-color: #b2babb;
+      }
+      h1 {
+        color: #d68910;
+      }
+      h3 {
+        color: #2980b9;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>24.Program to find first and last digit of a number?</h1>
+    <center>
+      <table>
+	<tr>
+          <td><h3>Enter the number</h3></td>
+          <td>:</td>
+          <td><input type="textbox" id="num1" /></td>
+        </tr>
+        <tr>
+	<tr>
+          <th style="text-align: center">
+            <button type="button" onClick="firstnum()">First Digit</button>
+          </th>
+	  <th style="text-align: center">
+            <button type="button" onClick="Lastnum()">Last Digit</button>
+          </th>
+        </tr>
+	<tr>
+          <td><h3>First Digit</h3></td>
+          <td>:</td>
+          <td><input type="textbox" id="first" /></td>
+        </tr>
+	<tr>
+          <td><h3>Last Digit</h3></td>
+          <td>:</td>
+          <td><input type="textbox" id="last" /></td>
+        </tr>
+      </table>
+    </center>
+    
+    <script>
+     function firstnum()
+    {
+        var n;
+	n= parseInt(document.getElementById("num1").value);
+	while (n>=10) {
+	  n=Math.floor(n/10);
+	  document.getElementById("first").value=n;
+	}
+    }
+     function Lastnum()
+    {
+        var n;
+	n= parseInt(document.getElementById("num1").value);
+	while (n>=10) {
+	 n=Math.floor(n%10);
+	  document.getElementById("last").value=n;
+	}
+    }
+ 
+    </script>
+  </body>
+</html>
